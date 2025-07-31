@@ -27,8 +27,3 @@ CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
 ```text
 # requirements.txt
 # List of Python packages to install
-
-Flask
-selenium
-beautifulsoup4
-gunicorn
