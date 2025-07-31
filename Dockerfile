@@ -1,5 +1,3 @@
-# --- Stage 1: Builder ---
-# This stage installs the browser and driver
 FROM debian:bullseye-slim AS builder
 
 # Install system dependencies for Chrome and utilities
