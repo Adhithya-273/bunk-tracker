@@ -49,6 +49,8 @@ def get_attendance_data(username, password):
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
+    # --- THIS LINE IS THE FIX FOR THE RUNTIME ERROR ---
+    options.add_argument("--disable-features=site-per-process")
     
     # This is how Selenium finds the pre-installed Chrome in the container
     driver = webdriver.Chrome(options=options)
@@ -254,7 +256,5 @@ def index():
     return render_template_string(HTML_TEMPLATE)
 
 if __name__ == '__main__':
-    # This part is for running the app on a server.
-    # The PORT environment variable is automatically set by Render.
     port = int(os.environ.get('PORT', 8080))
     app.run(host='0.0.0.0', port=port)
