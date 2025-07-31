@@ -24,6 +24,3 @@ EXPOSE 8080
 # Define the command to run the application using gunicorn
 # Gunicorn is a professional-grade server for Flask apps
 CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
-```text
-# requirements.txt
-# List of Python packages to install
